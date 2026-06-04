@@ -76,6 +76,8 @@ async function generateResumePdfController(req, res) {
     const { interviewReportId } = req.params
 
     const interviewReport = await interviewReportModel.findById(interviewReportId)
+    console.log("PDF API HIT");
+console.log("REPORT:", interviewReport);
 
     if (!interviewReport) {
         return res.status(404).json({
