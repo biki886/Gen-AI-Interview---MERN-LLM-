@@ -1,0 +1,38 @@
+.button{
+    border: none;
+    outline: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease-in-out;
+
+    &.primary-button{
+        background: linear-gradient(135deg, #007acc 0%, #005a9e 100%);
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 122, 204, 0.2);
+
+        &:hover {
+            background: linear-gradient(135deg, #0088cc 0%, #006ab8 100%);
+            box-shadow: 0 4px 16px rgba(0, 122, 204, 0.3);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
